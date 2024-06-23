@@ -1,13 +1,23 @@
 alert("Bem Vindo ao jogo do Número Secreto");
 
 let numeroSecreto = 5;
+let numeroEscolhido;
+let tentativas = 1;
 console.log(numeroSecreto);
 
-let numeroEscolhido = prompt("Escolha um número entre 1 e 10");
-
 // Mensagem de acerto do número
-if (numeroSecreto == numeroEscolhido) {
-    alert(`Acertou! Número ${numeroSecreto}`);
-} else {
-    alert("Errou!")
+while (numeroSecreto != numeroEscolhido) {
+    
+    numeroEscolhido = prompt("Escolha um número entre 1 e 10");
+
+    if (numeroSecreto == numeroEscolhido) {
+        alert(`Acertou! Número ${numeroSecreto}, em ${tentativas} tentativas.`);
+    } else {
+        if (numeroSecreto > numeroEscolhido) {
+            alert(`O Número Secreto é maior que ${numeroEscolhido}.`);
+        } else {
+            alert(`O Número Secreto é menor que ${numeroEscolhido}.`);
+        }
+        tentativas ++ // tentativas = tentativas + 1;
+    }
 }
