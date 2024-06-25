@@ -66,6 +66,9 @@ function verificarChute() {
 function exibirtTexto(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
+    
+    // responsiveVoice.speak(texto, "Brazilian Portuguese Female", {rate:1.2});
+    // Necessário chave API
 }
 
 // Função para gerar um número aleatório
