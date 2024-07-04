@@ -29,9 +29,12 @@ img {
 .buttons {
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 
 .buttons_link {
+    margin: 0px;
+    padding: 0px;
     background-color: #22d4fd;
     width: 100px;
     height: 25px;
@@ -40,4 +43,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    font-family: "Anton SC", sans-serif;
+    color: black;
+
 }
