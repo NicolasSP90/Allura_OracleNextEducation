@@ -128,5 +128,10 @@ body{
 
     .apresentacao{
         flex-direction: column-reverse;
+        padding: ;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
     }
 }
