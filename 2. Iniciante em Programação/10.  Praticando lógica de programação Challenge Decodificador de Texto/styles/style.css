@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet');
+
+:root{
+    --background-color: #F3F5FC;
+    --background-contrast-color: #FFFFFF;
+    --background-extra-colot: #0A3871;
+    --hover-color: #757FB2;
+
+    --font-main-color: #0A3871;
+    --font-contrast-color: #000000;
+    --font-extra-color: #FFFFFF;
+    --font-warning: #495057;
+    
+    --font-main: 'Inter', sans-serif;
+
+    --conteudo__texto__input: 80%;
+    --conteudo__texto__alerta__height: 16px;
+}
+
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+}
+
+.cabecalho{
+    height: 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo{
+    height: 80%;
+    box-sizing: border-box;
+    background-color: #F3F5FC;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.conteudo__logo{
+    padding: 40px 0px 0px 0px;
+    width: 120px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.conteudo__logo__alura{
+    width: 32px;
+}
+
+.conteudo__texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 168px 0px 0px 0px;
+}
+
+.conteudo__texto__input{
+    background-color: transparent;
+    font-family: var(--font-main);
+    font-size: 32;
+    color: var(--font-main-color);
+    width: 100%;
+    height: var(--conteudo__texto__input);
+    text-align: ;
+    border: none;
+    resize: none;
+}
+
+.conteudo__texto__alerta{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: var(--conteudo__texto__alerta__height);
+    width: 100%;
+    gap: 8px;
+}
+
+.conteudo__texto__alerta__imagem{
+    height: 100%;
+}
+
+.conteudo__texto__alerta__texto{
+    font-family: var(--font-main);
+    color: var(--font-warning);
+    font-size: 12px;
+}
+
+.conteudo__texto__botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - var(--conteudo__texto__input) - var(--conteudo__texto__alerta__height));
+}
+
+
+.rodape{
+    height: 10%;
+    box-sizing: border-box;
+}

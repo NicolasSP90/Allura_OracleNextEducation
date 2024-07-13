@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Alura Challenge - Decodificador de Texto</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Alura Challenge - Decodificador de Texto</h1>        
+    </header>
+    
+    <main class="conteudo">
+        <div class="conteudo__logo">
+            <img class="conteudo__logo__alura" src="assets/Logo_Alura.png" alt="Logo_Alura">
+        </div>
+
+        <section class="conteudo__texto">
+            <textarea class="conteudo__texto__input" type="text" placeholder="Digite seu texto"></textarea>
+                
+            <div class="conteudo__texto__alerta">
+                <img class="conteudo__texto__alerta__imagem" src="assets/Exclamation_Circle.png" alt="Exclamation_Circle">
+                <p class="conteudo__texto__alerta__texto">Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="conteudo__texto__botoes">
+                <button class="conteudo__texto__botoes__criptografar">Criptografar</button>
+
+                <button class="conteudo__texto__botoes__descriptografar">Descriptografar</button>
+            </div>
+        </section>
+        
+        <section class="conteudo__resultado">
+            <img src="assets/Logo_Decodificador.png" alt="Logo_Decodificador">
+
+            <div>
+                <h1>Nenhuma mensagem encontrada</h1>
+
+                <p>Digite um texto que você deseja criptografar.</p>
+            </div>
+
+            <button>Copiar</button>
+        </section>
+    </main>
+    
+    <footer class="rodape">
+        <p>Criado por Nícolas Sartor Parisotto - 2024</p>
+    </footer>
+    
+    <script src="app.js" defer></script>
+</body>
+
+
+
+</html>
