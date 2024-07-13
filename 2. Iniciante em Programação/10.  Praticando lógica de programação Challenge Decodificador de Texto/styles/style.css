@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet');
 
 :root{
-    --background-color: #F3F5FC;
-    --background-contrast-color: #FFFFFF;
-    --background-extra-colot: #0A3871;
+    --background-primary-color: #F3F5FC;
+    --background-secondary-color: #FFFFFF;
+    --button-first-color: #0A3871;
+    --button-second-color: #D8DFE8;
     --hover-color: #757FB2;
 
     --font-main-color: #0A3871;
@@ -12,6 +13,8 @@
     --font-warning: #495057;
     
     --font-main: 'Inter', sans-serif;
+
+    --conteudo: 90%;
 
     --conteudo__texto__input: 80%;
     --conteudo__texto__alerta__height: 16px;
@@ -28,23 +31,32 @@ body{
 }
 
 .cabecalho{
-    height: 10%;
+    height: calc((100% - var(--conteudo))/2);
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    background-color: var(--button-first-color);
+    
+}
+
+.cabecalho__titulo{
+    font-family: var(--font-main);
+    color: var(--font-extra-color);
+    font-size: 32px;
+    width: 650px;
 }
 
 .conteudo{
-    height: 80%;
+    height: var(--conteudo);
     box-sizing: border-box;
-    background-color: #F3F5FC;
+    background-color: var(--background-primary-color);
     display: flex;
     justify-content: space-between;
     gap: 80px;
+    padding: 40px;
 }
 
 .conteudo__logo{
-    padding: 40px 0px 0px 0px;
     width: 120px;
     display: flex;
     align-items: start;
@@ -60,8 +72,9 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
-    padding: 168px 0px 0px 0px;
+    min-width: 680px;
+    padding: 128px 0px 0px 0px;
+    flex-grow: 1;
 }
 
 .conteudo__texto__input{
@@ -74,6 +87,7 @@ body{
     text-align: ;
     border: none;
     resize: none;
+    line-height: 150%;
 }
 
 .conteudo__texto__alerta{
@@ -101,10 +115,60 @@ body{
     align-items: center;
     width: 100%;
     height: calc(100% - var(--conteudo__texto__input) - var(--conteudo__texto__alerta__height));
+    gap: 24px;
+}
+.conteudo__texto__botoes__criptografar{
+    width: 330px;
+    padding: 24px;
+    font-size: 16px;
+    font-family: var(--font-main);
+    color: var(--font-extra-color);
+    background-color: var(--button-first-color);
+    border-radius: 24px;
+}
+
+.conteudo__texto__botoes__criptografar:hover{
+    background-color: var(--hover-color);
+}
+
+.conteudo__texto__botoes__descriptografar{
+    width: 330px;
+    padding: 24px;
+    font-size: 16px;
+    font-family: var(--font-main);
+    color: var(--font-main-color);
+    background-color: var(--button-second-color);
+    border-radius: 24px;
+}
+
+.conteudo__texto__botoes__descriptografar:hover{
+    background-color: var(--hover-color);
+}
+
+.conteudo__resultado{
+    width: 400px;
 }
 
 
+
+
+
+
+
+
+
 .rodape{
-    height: 10%;
+    height: calc((100% - var(--conteudo))/2);
     box-sizing: border-box;
+    background-color: var(--button-first-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.rodape__texto{
+    font-family: var(--font-main);
+    color: var(--font-extra-color);
+    font-size: 16px;
 }
