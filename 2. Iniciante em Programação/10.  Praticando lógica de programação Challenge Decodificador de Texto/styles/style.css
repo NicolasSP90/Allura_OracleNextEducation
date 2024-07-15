@@ -33,8 +33,6 @@
 body{
     height: 100vh;
     max-height: 100vh;
-    min-width: 1440px;
-    min-height: 750px;
 }
 
 .cabecalho{
@@ -51,23 +49,18 @@ body{
     font-family: var(--font-main);
     color: white;
     font-size: 32px;
-    width: 650px;
 }
 
 .conteudo{
-    height: calc(100% - 100px);
-    min-height: 400px;
+    height: calc(100% - 100px);  
     width: 100%;
     box-sizing: border-box;
     background-color: var(--light-blue-100);
     display: flex;
     justify-content: center;
-    padding: 40px;
-    gap: 80px;
 }
 
 .conteudo__logo{
-    width: 120px;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -82,8 +75,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 680px;
-    padding: 128px 0px 0px 0px;
+    gap: 16px;
 }
 
 .conteudo__texto__input{
@@ -92,7 +84,6 @@ body{
     font-size: 2rem;
     color: var(--dark-blue-300);
     width: 100%;
-    height: 675px;
     border: none;
     resize: none;
     line-height: 150%;
@@ -129,39 +120,36 @@ textarea::placeholder{
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 0px 0px 32px 0px;
     gap: 24px;
 }
 .conteudo__texto__botoes__criptografar{
-    width: 330px;
-    padding: 24px;
     font-size: 16px;
     font-family: var(--font-main);
     color: white;
     background-color: var(--dark-blue-300);
     border-radius: 24px;
+    width: 330px;
+    padding: 24px;
 }
 
 .conteudo__texto__botoes__descriptografar{
-    width: 330px;
-    padding: 24px;
     font-size: 1rem;
     font-family: var(--font-main);
     color: var(--dark-blue-300);
     background-color: transparent;
     border-radius: 24px;
     border: 1px solid var(--dark-blue-300);
+    width: 330px;
+    padding: 24px;
 }
 
 .conteudo__resultado{
-    width: 336px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: white;
     border-radius: 32px;
-    padding: 32px;
     gap: 32px;
 }
 
@@ -185,7 +173,6 @@ textarea::placeholder{
     justify-content: center;
     align-items: center;    
     gap: 16px;
-    padding: 0px 32px 0px 32px;
 }
 
 .conteudo__resultado__instrucoes__titulo{
@@ -210,10 +197,7 @@ textarea::placeholder{
     color: var(--dark-blue-300);
     background-color: transparent;
     border: 1px solid var(--dark-blue-300);
-    width: 336px;
-    padding: 24px;
     border-radius: 24px;
-
 }
 
 .conteudo__texto__botoes__criptografar:hover, 
@@ -236,4 +220,95 @@ textarea::placeholder{
     font-family: var(--font-main);
     color: white;
     font-size: 16px;
+}
+
+/*Desktop*/
+@media (min-width: 1440px){
+    body{
+        min-height: 750px;
+    }
+
+    .cabecalho__titulo{
+        width: 650px;
+    }
+
+    .conteudo{
+        min-height: 400px;
+        padding: 40px;
+        gap: 80px;
+    }
+    
+    .conteudo__logo{
+        width: 120px;
+    }
+
+    .conteudo__texto{
+        width: 680px;
+        padding: 128px 0px 0px 0px;
+    }
+
+    .conteudo__texto__input{
+        height: 675px;
+    }
+
+    .conteudo__texto__botoes{
+        padding: 0px 0px 32px 0px;
+    }
+
+    .conteudo__resultado{
+        width: 336px;
+        padding: 32px;
+    }
+
+    .conteudo__resultado__instrucoes{
+        padding: 0px 32px 0px 32px;
+    }
+
+    .conteudo__resultado__botao{
+        width: 336px;
+        padding: 24px;
+    }
+}
+
+/*Tablet*/
+@media (max-width:1439px) and (min-width: 650px) {
+    body{
+        min-height: 1000px;
+    }
+    
+    .conteudo{
+        flex-direction: column;
+        padding: 40px;
+        justify-content: space-between;
+        gap: 64px;
+    }
+
+    .conteudo__logo{
+        justify-content: left;
+    }
+    
+    .conteudo__texto{
+        height: 100%;
+        min-height: 450px;
+    }
+
+    .conteudo__texto__input{
+        height: 100%;
+        padding: 52px 0px 0px 0px;
+    }
+
+    .conteudo__resultado{
+        padding: 32px;
+    }
+
+    .conteudo__resultado__logo{
+        display: none;
+    }
+
+
+}
+
+/*Smartphone*/
+@media (max-width:649) and (min-width:300px) {
+
 }
