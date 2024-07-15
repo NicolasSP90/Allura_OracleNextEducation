@@ -30,11 +30,6 @@
     margin: 0;
 }
 
-body{
-    height: 100vh;
-    max-height: 100vh;
-}
-
 .cabecalho{
     width: 100%;
     height: 50px;
@@ -120,10 +115,10 @@ textarea::placeholder{
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 24px;
+    gap: 20px;
 }
 .conteudo__texto__botoes__criptografar{
-    font-size: 16px;
+    font-size: 1rem;
     font-family: var(--font-main);
     color: white;
     background-color: var(--dark-blue-300);
@@ -179,7 +174,6 @@ textarea::placeholder{
     font-family: var(--font-main);
     font-size: 1.5rem;
     color: var(--gray-400);
-    font-size: 1.5rem;
     line-height: 120%;
     text-align: center;
 }
@@ -198,6 +192,7 @@ textarea::placeholder{
     background-color: transparent;
     border: 1px solid var(--dark-blue-300);
     border-radius: 24px;
+    padding: 24px;
 }
 
 .conteudo__texto__botoes__criptografar:hover, 
@@ -219,13 +214,15 @@ textarea::placeholder{
 .rodape__texto{
     font-family: var(--font-main);
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /*Desktop*/
 @media (min-width: 1440px){
     body{
-        min-height: 750px;
+        height: 100vh;
+        max-height: 100vh;
+        min-height: 750px; 
     }
 
     .cabecalho__titulo{
@@ -265,35 +262,38 @@ textarea::placeholder{
     }
 
     .conteudo__resultado__botao{
-        width: 336px;
-        padding: 24px;
+        width: 100%;
     }
+
 }
 
 /*Tablet*/
-@media (max-width:1439px) and (min-width: 650px) {
+@media (max-width:1439px) and (min-width: 765px) {
     body{
-        min-height: 1000px;
+        min-height: 1170px;
+        max-height: 100vh;
+        height: 100vh;
     }
     
     .conteudo{
         flex-direction: column;
         padding: 40px;
         justify-content: space-between;
-        gap: 64px;
+        gap: 60px;
     }
 
     .conteudo__logo{
         justify-content: left;
+        padding: 35px 0px 0px 0px;
     }
     
     .conteudo__texto{
         height: 100%;
-        min-height: 450px;
     }
 
     .conteudo__texto__input{
         height: 100%;
+        min-height: 400px;
         padding: 52px 0px 0px 0px;
     }
 
@@ -305,7 +305,13 @@ textarea::placeholder{
         display: none;
     }
 
+    .conteudo__resultado__instrucoes{
+        height: 69px;
+    }
 
+    .conteudo__resultado__botao{
+        width: 330px;
+    }
 }
 
 /*Smartphone*/
