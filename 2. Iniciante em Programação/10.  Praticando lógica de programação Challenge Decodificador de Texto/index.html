@@ -29,12 +29,12 @@
             <div class="conteudo__texto__botoes">
                 <button onclick="criptografar()" class="conteudo__texto__botoes__criptografar">Criptografar</button>
 
-                <button class="conteudo__texto__botoes__descriptografar">Descriptografar</button>
+                <button onclick="descriptografar()" class="conteudo__texto__botoes__descriptografar">Descriptografar</button>
             </div>
         </section>
         
         <section class="conteudo__resultado">
-            <textarea class="conteudo__resultado__resposta" id="resposta"></textarea>
+            <p class="conteudo__resultado__resposta" id="resposta"></p>
 
             <img class="conteudo__resultado__logo" id="resultado__logo" src="assets/Logo_Decodificador.png" alt="Logo_Decodificador">
 
@@ -44,7 +44,7 @@
                 <p class="conteudo__resultado__instrucoes__texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
 
-            <button class="conteudo__resultado__botao" id="copiar">Copiar</button>
+            <button onclick="copiarEresetar()" class="conteudo__resultado__botao" id="copiar">Copiar</button>
         </section>
     </main>
     

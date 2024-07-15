@@ -27,3 +27,6 @@ gaitober" => "gato"<br>
 
 <h2>Extras</h2>
 <li>Um botão que copie o texto criptografado/descriptografado para a área de transferência - ou seja, que tenha a mesma funcionalidade do ctrl+C ou da opção "copiar" do menu dos aplicativos.
+
+<h2>Notas</h2>
+<li>Na criptografia, tentei utilizar uma lógica apenas para criptografar <-> descriptografar. Para isso criei duas listas, uma com as letas e outra com as chaves. A ideia seria apenas trocar a chamada das listas na função. Ex: Criptografar = funcao(lista1, lista2); Descriptografar = funcao(lista2,lista1). Não funcionou por conta da palavra "fames". Para essa palavra em específico, se for descriptografada na mesma ordem em que foi criptografada, a palavra final é apenas "fa" (Criptografar: fames -> (e) famenters -> (a) faimenters | Desciptografar: faimenters -> (enter) faimes -> (imes) fai -> (ai) fa). Por conta disso, a função tem um argumento a mais para identificar a ação a ser feita, sendo que criptografar utiliza a conversão do início das listas para o final, enquanto descriptografar utiliza a conversão do final das listas para o início.
