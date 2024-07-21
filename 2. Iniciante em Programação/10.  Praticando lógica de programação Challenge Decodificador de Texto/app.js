@@ -44,3 +44,24 @@ function mudarEstilo(estilo) {
     document.getElementById("hidden_visual").href = `styles/${estilo}.css`;
 }
 
+
+/* Overflow do logo para páginas pequenas SEM corte */
+document.addEventListener("DOMContentLoaded", function() {
+    var divLogoResposta = document.getElementById('resultado');
+    
+    function checarAjustarDiv() {
+        if (divLogoResposta.offsetHeight < 500) {
+            divLogoResposta.style.justifyContent = 'flex-start';
+        } else {
+            divLogoResposta.style.justifyContent = 'center';
+        }
+    }
+
+    checarAjustarDiv();
+
+    window.addEventListener('resize', checkAndAdjustDiv());
+
+    var observer = new MutationObserver(checarAjustarDiv());
+    observer.observe(divLogoResposta, { childList: true, subtree: true, attributes: true});
+});
+
