@@ -11,8 +11,6 @@
     box-sizing: border-box;
 }
 
-
-
 iframe{
     height: 100%;
     position: absolute;
@@ -20,7 +18,6 @@ iframe{
     left: 0;
     z-index: -1;
     pointer-events: none;
-    
 }
 
 .cabecalho{
@@ -31,13 +28,12 @@ iframe{
     justify-content: center;
     align-items: center;
     background-color: var(--background-cabecalho-rodape);
-    
 }
 
 .cabecalho__titulo{
     font-family: var(--font-main);
     color: var(--font-color-cabecalho-rodape);
-    font-size: 2rem;
+    font-size: 32px;
 }
 
 .conteudo{
@@ -51,10 +47,7 @@ iframe{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.conteudo__logo__alura{
-    width: 32px;
+    overflow: scroll;
 }
 
 .conteudo__logo__estilo{
@@ -64,8 +57,6 @@ iframe{
     align-items: center;
     border: 1px solid blue;
     border-radius: 10%;
-    width: fit-content;
-    height: fit-content;
 }
 
 .conteudo__texto{
@@ -74,6 +65,7 @@ iframe{
     align-items: center;
     flex-direction: column;
     gap: 16px;
+    overflow: scroll;
 }
 
 .conteudo__texto__input{
@@ -125,18 +117,22 @@ textarea::placeholder{
 }
 
 .conteudo__texto__botoes__criptografar,
-.conteudo__texto__botoes__descriptografar{
+.conteudo__texto__botoes__descriptografar,
+.conteudo__resultado__botao{
     font-size: 16px;
     font-family: var(--font-main);
     border-radius: 24px;
     width: 330px;
-    height: 68px;
-    padding: 24px;
-    background-color: transparent;
+    height: 60px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .conteudo__texto__botoes__criptografar{
     color: var(--font-color-criptografar);
+    background-color: transparent;
     border: 1px solid var(--border-criptografar);
 }
 
@@ -145,9 +141,9 @@ textarea::placeholder{
     opacity: 0.75;
 }
 
-
 .conteudo__texto__botoes__descriptografar{
     color: var(--font-color-decriptografar);
+    background-color: transparent;
     border: 1px solid var(--border-decriptografar);
 }
 
@@ -165,6 +161,7 @@ textarea::placeholder{
     gap: 30px;
     border: 1px solid white;
     border-radius: 30px;
+    overflow: scroll;
 }
 
 .conteudo__resultado__logo{
@@ -213,12 +210,9 @@ textarea::placeholder{
 }
 
 .conteudo__resultado__botao{
-    font-family: var(--font-main);
     color: var(--font-color-copiar);
     background-color: transparent;
     border: 1px solid var(--border-copiar);
-    border-radius: 24px;
-    padding: 24px;
 }
 
 .conteudo__resultado__botao:hover{
@@ -237,9 +231,14 @@ textarea::placeholder{
 }
 
 .rodape__texto{
+    text-decoration: none;
     font-family: var(--font-main);
     color: var(--font-color-cabecalho-rodape);
     font-size: 16px;
+}
+
+.rodape__texto__github{
+    
 }
 
 /*Desktop*/
@@ -247,10 +246,6 @@ textarea::placeholder{
     body{
         height: 100vh;
         width: 100vw;
-    }
-
-    .cabecalho__titulo{
-        width: 650px;
     }
 
     .conteudo{
@@ -261,13 +256,16 @@ textarea::placeholder{
     }
     
     .conteudo__logo{
+        flex-direction: column;
         min-width: 120px;
         width: 10%;
-        flex-direction: column;
-        overflow: scroll;
     }
 
-    .conteudo__logo__one{
+    .conteudo__logo__icones__one{
+        width: 100%;
+    }
+
+    .conteudo__logo__estilo{
         width: 100%;
     }
 
@@ -275,8 +273,6 @@ textarea::placeholder{
         width: 100%;
         border-radius: 10%;
     }
-
-
 
     .conteudo__texto{
         width: 680px;
@@ -309,39 +305,63 @@ textarea::placeholder{
     }
 }
 
+@media (min-width: 1440px) and (max-height: 675px) {
+    .conteudo__resultado{
+        justify-content: start;
+    }
+}
+
 /*Tablet*/
 @media (max-width:1439px) and (min-width: 770px) {
     body{
         height: 100vh;
+        width: 100vw;
     }
 
     .conteudo{
         height: calc(100% - 100px);
         flex-direction: column;
-        padding: 40px;
+        padding: 0px 40px 0px;
         justify-content: space-between;
         gap: 20px;
-        overflow: scroll;
     }
 
     .conteudo__logo{
-        justify-content: left;
+        flex-direction: row;
+        min-height: 50px;
+        height: 10%;
+    }
+
+    .conteudo__logo__icones{
+        height: 100%;
+    }
+
+    .conteudo__logo__icones__one{
+        height: 100%;
+    }
+
+    .conteudo__logo__estilo{
+        height: 100%;
+    }
+
+    .conteudo__logo__estilo__imagem{
+        height: 100%;
+        border-radius: 10%;
     }
 
     .conteudo__texto{
-        height: 100%;
+        height: 50%;
     }
 
     .conteudo__texto__input{
         height: 100%;
-        min-height: 300px;
-        padding: 10px;
+        min-height: 100px;
     }
 
     .conteudo__resultado{
-        padding: 34px;
-        height: 100%;
-        min-height: auto;
+        padding: 20px;
+        height: 30%;
+        min-height: 200px;
         width: 100%;
         box-sizing: border-box;
     }
@@ -357,7 +377,12 @@ textarea::placeholder{
     .conteudo__resultado__botao{
         width: 330px;
     }
+}
 
+@media (max-width:1439px) and (min-width: 770px) and (max-height: 620px)  {
+    .conteudo__texto{
+        justify-content: start;
+    }
 }
 
 /*Smartphone*/
@@ -368,31 +393,50 @@ textarea::placeholder{
     }
 
     .cabecalho__titulo{
-        width: 340px;
         font-size: 16px;
     }
 
     .conteudo{
         height: calc(100% - 100px);
-        width: 100%;
         flex-direction: column;
-        padding: 20px;
+        padding: 0px 10px 0px;
         justify-content: space-between;
         gap: 20px;
     }
 
     .conteudo__logo{
-        justify-content: left;
+        flex-direction: row;
+        min-height: 50px;
+        height: 10%;
+    }
+
+    .conteudo__logo__icones{
+        height: 100%;
+    }
+
+    .conteudo__logo__icones__one{
+        height: 100%;
+    }
+
+    .conteudo__logo__estilo{
+        height: 100%;
+    }
+
+    .conteudo__logo__estilo__imagem{
+        height: 100%;
+        border-radius: 10%;
     }
 
     .conteudo__texto{
         height: 100%;
-        gap: 16px
+        height: 50%;
+        gap: 10px
     }
 
     .conteudo__texto__input{
         height: 100%;
-        min-height: 290px;
+        min-height: 100px;
+        font-size: 16px;
     }
 
     .conteudo__texto__botoes{
@@ -401,11 +445,15 @@ textarea::placeholder{
 
     .conteudo__resultado{
         width: 100%;
-        padding: 32px;
+        padding: 10px;
         gap: 32px;
-        height: 100%;
-        min-height: auto;
+        height: 30%;
+        min-height: 200px;
         box-sizing: border-box;
+    }
+
+    .conteudo__resultado__resposta{
+        font-size: 16px;
     }
 
     .conteudo__resultado__logo{
@@ -417,5 +465,34 @@ textarea::placeholder{
     .conteudo__resultado__botao{
         width: 100%;
         max-width: 300px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .conteudo__resultado__instrucoes{
+        height: 69px;
     }
 }
+
+@media (max-width: 380px){
+    .cabecalho__titulo,
+    .rodape__texto{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 280px){
+    .cabecalho,
+    .conteudo,
+    .rodape{
+        display: none;
+    }
+}
+
+/*
+@media (max-width: 769px) and (max-height: 620px)  {
+    .conteudo__texto{
+        justify-content: start;
+    }
+}
+*/
