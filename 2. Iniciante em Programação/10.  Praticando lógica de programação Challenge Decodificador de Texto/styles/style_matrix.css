@@ -47,7 +47,7 @@ iframe{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .conteudo__logo__estilo{
@@ -65,7 +65,10 @@ iframe{
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    overflow: scroll;
+    overflow: auto;
+    scrollbar-arrow-color: transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-color: white;
 }
 
 .conteudo__texto__input{
@@ -161,7 +164,10 @@ textarea::placeholder{
     gap: 30px;
     border: 1px solid white;
     border-radius: 30px;
-    overflow: scroll;
+    overflow: auto;
+    scrollbar-arrow-color: transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-color: white;
 }
 
 .conteudo__resultado__logo{
@@ -182,7 +188,10 @@ textarea::placeholder{
     resize: none;
     line-height: 150%;
     outline: none;
-    overflow-y: scroll;
+    overflow: auto;
+    scrollbar-arrow-color: transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-color: white;
 }
 
 .conteudo__resultado__instrucoes{
@@ -237,10 +246,6 @@ textarea::placeholder{
     font-size: 16px;
 }
 
-.rodape__texto__github{
-    
-}
-
 /*Desktop*/
 @media (min-width: 1440px){
     body{
@@ -277,7 +282,10 @@ textarea::placeholder{
     .conteudo__texto{
         width: 680px;
         padding: 125px 0px 0px 0px;
-        overflow: scroll;
+        overflow: auto;
+        scrollbar-arrow-color: transparent;
+        scrollbar-base-color: transparent;
+        scrollbar-color: white;
     }
 
     .conteudo__texto__input{
@@ -293,7 +301,11 @@ textarea::placeholder{
         width: 340px;
         height: 100%;
         padding: 30px;
-        overflow: scroll;
+        overflow: auto;
+        scrollbar-arrow-color: transparent;
+        scrollbar-base-color: transparent;
+        scrollbar-color: white;
+        
     }
 
     .conteudo__resultado__instrucoes{

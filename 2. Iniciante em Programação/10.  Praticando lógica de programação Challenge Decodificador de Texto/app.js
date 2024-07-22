@@ -8,20 +8,20 @@ let listaChaves = ["enter", "imes", "ai", "ober", "ufat"];
 function criptografar() {
     textoNomal = document.getElementById("input").value;
     document.getElementById("resposta").innerHTML = mudarString(listaLetras, listaChaves, "Criptografar");
-    mudarEstilo("style_answer");
+    resetarEstilo("style_answer");
 }
 
 function descriptografar() {
     textoNomal = document.getElementById("input").value;
     document.getElementById("resposta").innerHTML = mudarString(listaChaves, listaLetras, "Descriptografar");
-    mudarEstilo("style_answer");
+    resetarEstilo("style_answer");
 }
 
 function copiarEresetar() {
     textoNomal = document.getElementById("resposta").innerHTML;
     navigator.clipboard.writeText(textoNomal)
     document.getElementById("input").value = "";
-    mudarEstilo("style_start");
+    resetarEstilo("style_start");
     alert("O texto foi copiado!");
 }
 
@@ -40,8 +40,23 @@ function mudarString(listaAlterar, listaRegra, acao){
     return novoTexto;
 }
 
-function mudarEstilo(estilo) {
+function resetarEstilo(estilo) {
     document.getElementById("hidden_visual").href = `styles/${estilo}.css`;
 }
 
+function takePill() {
+    var pill = document.getElementById("pill").alt;
+    console.log(pill)
+    
+    if (pill == "Blue_Pill"){
+        document.getElementById("pill").alt = "Red_Pill";
+        resetarEstilo("style_start");
+        document.getElementById("theme-stylesheet").href = "styles/style_original.css";
+    }
 
+    if (pill == "Red_Pill"){
+        document.getElementById("pill").alt = "Blue_Pill";
+        resetarEstilo("style_start");
+        document.getElementById("theme-stylesheet").href = "styles/style_matrix.css";
+    }
+}
